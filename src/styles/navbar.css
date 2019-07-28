@@ -1,0 +1,156 @@
+/* DESKTOP NAVBAR*/
+.nav-signed-out {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: #448AFF;
+    min-height: 52px;
+    -webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+}
+
+.nav-signed-out .logo {
+    font-size: 30px;
+    color: rgb(66, 64, 64);
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.nav-signed-out .logo a {
+    text-decoration: none;
+ }
+
+.nav-links {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+
+}
+
+.nav-links li {
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    position: relative;
+    font-family: 'Eczar', serif;
+}
+
+.nav-links .navlink {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 17px 12px 13px 12px;
+    color: #fff;
+    height: 100%;
+}
+
+
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width:100%;
+    background: #000;
+    position: relative;
+    top: 5px;
+    width: 0%;
+    transition: all ease-in-out 300ms;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-signed-out .tog-btn {
+    display: none;
+    background: #448AFF;
+    font-size: 22px;
+    padding: 4px 8px;
+    border: none;
+    margin: 7px 15px 7px 0;
+}
+
+.nav-signed-out .tog-btn:hover {
+    background: #81D4FA;
+    cursor: pointer;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(100, 181, 246, 0.9);
+    overflow-x: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+
+.mob-links {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Eczar', serif;
+}
+
+.overlay .moblink {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff;
+    display: block;
+    transition: ease-in-out 0.3s;
+}
+
+.overlay .moblink:hover, .overlay moblink:focus {
+    color: #FFEB3B;
+}
+
+.overlay .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 33px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+.overlay .close-btn:hover {
+    background: rgb(245, 90, 90);
+}
+
+
+.home {
+    margin-top: 52px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .home {
+        margin-top: 52px;
+    }
+    .nav-signed-out .tog-btn {
+        display: block;
+    }
+    .nav-signed-out .nav-links {
+        display: none;
+    }
+}
+
+
